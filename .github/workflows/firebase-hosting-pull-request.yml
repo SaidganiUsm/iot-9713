@@ -17,7 +17,9 @@ jobs:
       - name: Install Dependencies and Build
         run: |
           npm ci
+          npm install --legacy-peer-deps
           npm run build
+
 
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
