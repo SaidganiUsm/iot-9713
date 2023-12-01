@@ -78,11 +78,6 @@ const DataDisplay = () => {
     firebase.database().ref('fan').set(newFanStatus);
   };
 
-  const convertToPercentage = (rawValue, max) => {
-    const percentage = (rawValue / max) * 100;
-    return Math.min(percentage, 100);
-  };
-
   return (
     <div className="main">
       <div className="header">
